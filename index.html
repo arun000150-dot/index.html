@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arun Gautam | Senior Visual Designer & Creative Director</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bebas+Neue&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #070a12;
+      --bg-card: rgba(15, 22, 36, 0.85);
+      --primary: #6366f1;
+      --primary-glow: rgba(99, 102, 241, 0.35);
+      --accent: #ec4899;
+      --accent-glow: rgba(236, 72, 153, 0.3);
+      --border: rgba(255, 255, 255, 0.08);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      background-image: 
+        radial-gradient(circle at 10% 0%, rgba(99, 102, 241, 0.18) 0, transparent 40%),
+        radial-gradient(circle at 90% 100%, rgba(236, 72, 153, 0.14) 0, transparent 40%);
+      min-height: 100vh;
+      padding-bottom: 70px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(7, 10, 18, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand i { color: var(--accent); }
+    .brand span { color: var(--primary); }
+
+    .nav-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      color: #4ade80;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-weight: 700;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #4ade80;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 2.5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: #818cf8;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.18;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #818cf8, #f472b6, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.08rem;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    /* Profile Card Bar */
+    .profile-banner {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.6rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 3.5rem;
+    }
+
+    .profile-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .profile-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #ec4899);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+    }
+
+    .profile-text h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .profile-text p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .profile-contact {
+      font-size: 0.8rem;
+      color: #818cf8;
+      margin-top: 4px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .profile-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag-badge {
+      background: #090e18;
+      border: 1px solid var(--border);
+      color: #cbd5e1;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* Filter Tabs */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 22px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 15px var(--primary-glow);
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 4rem;
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .work-card:hover {
+      border-color: rgba(99, 102, 241, 0.5);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Image Containers for Photos */
+    .photo-frame {
+      height: 210px;
+      position: relative;
+      overflow: hidden;
+      background: #0d1424;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .work-card:hover .photo-frame img {
+      transform: scale(1.06);
+    }
+
+    .photo-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .work-info {
+      padding: 1.3rem;
+      flex: 1;
+    }
+
+    .work-info h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .work-info p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Form Wrapper */
+    .form-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.4rem;
+      max-width: 680px;
+      margin: 0 auto;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+
+    .form-header h2 { font-size: 1.6rem; font-weight: 800; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #cbd5e1;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: #090e18;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 0.92rem;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--primary);
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(90deg, #6366f1, #ec4899);
+      color: #fff;
+      border: none;
+      padding: 0.95rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: 0.2s;
+    }
+
+    .submit-btn:hover {
+      box-shadow: 0 8px 20px var(--primary-glow);
+    }
+
+    /* Admin Section */
+    .admin-section {
+      margin-top: 4.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+
+    .admin-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .inquiry-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem;
+      margin-bottom: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .act-btn {
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .act-call { background: #6366f1; color: #fff; }
+    .act-del { background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid #ef4444; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="brand"><i class="fa-solid fa-cube"></i> Studio<span>Nova</span></a>
+    <div class="nav-status">
+      <div class="pulse-dot"></div> Available for Global Contracts
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <!-- Hero Header -->
+    <header class="hero">
+      <div class="hero-badge"><i class="fa-solid fa-earth-americas"></i> International Visual Designer & Brand Strategist</div>
+      <h1>High-Converting Visuals That <span>Scale Global Brands</span></h1>
+      <p>Delivering high-CTR YouTube thumbnails, 3D brand assets, and performance ad creatives for clients worldwide.</p>
+    </header>
+
+    <!-- Profile Banner (Masked Phone Format) -->
+    <div class="profile-banner">
+      <div class="profile-info">
+        <div class="profile-avatar">AG</div>
+        <div class="profile-text">
+          <h3>Arun Gautam</h3>
+          <p>Creative Director & Digital Asset Architect</p>
+          <div class="profile-contact">
+            <span><i class="fa-solid fa-phone"></i> +1 (***) ***-XX89</span>
+            <span><i class="fa-solid fa-envelope"></i> contact.arungautam@gmail.com</span>
+            <span><i class="fa-solid fa-location-dot"></i> Remote / Global (EST, GMT, IST)</span>
+          </div>
+        </div>
+      </div>
+      <div class="profile-badges">
+        <span class="tag-badge">Brand Identity</span>
+        <span class="tag-badge">High-CTR Graphics</span>
+        <span class="tag-badge">Ad Creatives</span>
+        <span class="tag-badge">SaaS Pitch Decks</span>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterGallery('all')">All Projects</button>
+      <button class="filter-btn" onclick="filterGallery('thumb')">YouTube Thumbnails</button>
+      <button class="filter-btn" onclick="filterGallery('social')">Performance Ads</button>
+      <button class="filter-btn" onclick="filterGallery('branding')">Brand Identity</button>
+    </div>
+
+    <!-- Gallery Grid with HD Real Photos & Mockups -->
+    <div class="gallery-grid" id="gallery">
+
+      <!-- Photo Card 1: 3D Tech & Brand Identity -->
+      <div class="work-card" data-cat="branding">
+        <div class="photo-frame">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="3D Brand Asset Design" />
+          <span class="photo-tag">3D Branding</span>
+        </div>
+        <div class="work-info">
+          <h3>Nexus AI Brand Identity Suite <i class="fa-solid fa-vector-square" style="color: #38bdf8;"></i></h3>
+          <p>Complete 3D visual system and corporate branding identity created for Silicon Valley SaaS.</p>
+        </div>
+      </div>
+
+      <!-- Photo Card 2: Performance Social Media Ad -->
+      <div class="work-card" data-cat="social">
+        <div class="photo-frame">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" alt="E-Commerce Product Ad" />
+          <span class="photo-tag">E-Commerce Ad</span>
+        </div>
+        <div class="work-info">
+          <h3>Footwear Performance Ad Pack <i class="fa-brands fa-instagram" style="color: #ec4899;"></i></h3>
+          <p>High-converting paid campaign layout tested for direct-to-consumer apparel brands.</p>
+        </div>
+      </div>
+
+      <!-- Photo Card 3: Creator Studio & High-CTR Thumbnail -->
+      <div class="work-card" data-cat="thumb">
+        <div class="photo-frame">
+          <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" alt="YouTube Production Design" />
+          <span class="photo-tag">14.2% CTR</span>
+        </div>
+        <div class="work-info">
+          <h3>Creator Studio & Documentary Pack <i class="fa-brands fa-youtube" style="color: #ef4444;"></i></h3>
+          <p>Curiosity-inducing visual hierarchy engineered to maximize organic YouTube click-through rate.</p>
+        </div>
+      </div>
+
+      <!-- Photo Card 4: Modern Minimalist Branding -->
+      <div class="work-card" data-cat="branding">
+        <div class="photo-frame">
+          <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" alt="Minimalist Mockup" />
+          <span class="photo-tag">Visual Identity</span>
+        </div>
+        <div class="work-info">
+          <h3>Nordic Minimalist Stationery <i class="fa-solid fa-palette" style="color: #818cf8;"></i></h3>
+          <p>Sophisticated typography, layout guidelines, and packaging design for luxury retail.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Project Brief Form -->
+    <div class="form-wrapper">
+      <div class="form-header">
+        <h2>Initiate a Design Partnership</h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Fill out project requirements to receive concept drafts within 2 hours.</p>
+      </div>
+
+      <form id="designInquiryForm">
+        <div class="form-group">
+          <label>Your Name / Organization</label>
+          <input type="text" id="cName" placeholder="e.g., Alex Reed / Pulse Media" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Scope of Project</label>
+            <select id="cService" required>
+              <option value="YouTube High-CTR Thumbnail Pack">YouTube High-CTR Thumbnail Pack</option>
+              <option value="Meta & TikTok Performance Ads">Meta & TikTok Performance Ads</option>
+              <option value="Full Brand & SaaS Visual Identity">Full Brand & SaaS Visual Identity</option>
+              <option value="Investor Pitch Deck / Keynote">Investor Pitch Deck / Keynote</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Project Budget Tier</label>
+            <select id="cBudget" required>
+              <option value="$50 - $150 (Quick Sprint)">$50 - $150 (Quick Sprint)</option>
+              <option value="$150 - $350 (Standard Pack)" selected>$150 - $350 (Standard Pack)</option>
+              <option value="$350 - $800+ (Full Enterprise)">$350 - $800+ (Full Enterprise)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Work Email</label>
+            <input type="email" id="cEmail" placeholder="alex@company.com" required />
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Timezone / Region</label>
+            <select id="cTimezone" required>
+              <option value="US Eastern / Pacific (EST/PST)">US & Canada (EST / PST)</option>
+              <option value="UK & Europe (GMT / CET)">UK & Europe (GMT / CET)</option>
+              <option value="Middle East / Asia (GST / IST)">Gulf & Asia (GST / IST)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Project Brief / References</label>
+          <textarea id="cDetails" rows="3" placeholder="Share target audience, reference links, color palette requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <i class="fa-solid fa-paper-plane"></i> Send Project Brief
+        </button>
+      </form>
+    </div>
+
+    <!-- Admin Leads Section -->
+    <section class="admin-section">
+      <div class="admin-controls">
+        <div>
+          <h3><i class="fa-solid fa-lock"></i> Director Admin Portal</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Manage inbound global design briefs</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="act-btn act-call" onclick="unlockAdmin()"><i class="fa-solid fa-key"></i> Login</button>
+          <button id="exportBtn" class="act-btn act-call" style="background:#25d366; display: none;" onclick="exportToCSV()"><i class="fa-solid fa-file-excel"></i> Export CSV</button>
+        </div>
+      </div>
+
+      <div id="adminContent" style="display: none;">
+        <div id="recordsBox"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Gallery Filter
+    function filterGallery(category) {
+      const cards = document.querySelectorAll('.work-card');
+      const btns = document.querySelectorAll('.filter-btn');
+      
+      btns.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.cat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Storage Engine (IndexedDB)
+    let db;
+    const dbReq = indexedDB.open("StudioNovaDB", 1);
+    dbReq.onupgradeneeded = (e) => {
+      db = e.target.result;
+      if (!db.objectStoreNames.contains("proposals")) {
+        db.createObjectStore("proposals", { keyPath: "id", autoIncrement: true });
+      }
+    };
+    dbReq.onsuccess = (e) => { db = e.target.result; };
+
+    // Submit Proposal
+    document.getElementById("designInquiryForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const newInquiry = {
+        name: document.getElementById("cName").value.trim(),
+        service: document.getElementById("cService").value,
+        budget: document.getElementById("cBudget").value,
+        email: document.getElementById("cEmail").value.trim(),
+        timezone: document.getElementById("cTimezone").value,
+        details: document.getElementById("cDetails").value.trim() || "N/A",
+        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' 
